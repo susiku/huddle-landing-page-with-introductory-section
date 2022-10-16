@@ -1,0 +1,130 @@
+@import url(https://fonts.google.com/specimen/Poppins);
+@import url(https://fonts.google.com/specimen/Open+Sans);
+@import url(https://fontawesome.com/);
+@import url();
+@import url();
+
+
+
+:root{
+--Violet: hsl(257, 40%, 49%);
+--Soft-Magenta: hsl(300, 69%, 71%);
+--font-family-heading:"Poppins", sans serif;
+--font-weight-big-heading:600;
+--font-weight-small-heading:400;
+--font-family-body: 'Open',sans serif;
+--font-weight-body:400;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: var(--Violet);
+    height: 100vh;
+    font-weight: var(--font-weight-body);
+}
+
+.main{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+header img {
+    height: 30px;
+    width: 50px;
+}
+
+main img{
+    max-width: 100%;
+}
+
+
+.icons{
+    display: flex;
+    justify-content: flex-end;
+    align-content: ;
+}
+
+
+.section2{
+    margin-top: 80px;
+     margin-left: 20px;
+     
+}
+
+h1{
+    color: white;
+    line-height: 40px;
+    font-weight: var(--font-weight-big-heading);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+
+button{
+    color: var(--Violet);
+    border-radius: 25px;
+    padding: 10px 30px;
+    border: none;
+}
+
+button:hover{
+    color: #ffffff;
+    background-color: var(--Soft-Magenta);
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.facebook{
+    width: 50px;
+    height: 60px;
+}
+
+
+.twitter{
+    width: 50px;
+    height: 60px;
+}
+
+.instagram{
+    width: 50px;
+    height: 60px;
+}
+
+
+
+
+@media screen and (max-width: 375px) {
+    main {
+      background-image: url(./images/bg-mobile.svg);
+      display: grid;
+      grid-template-columns: 1fr;
+      
+    }
+  }
+
+  @media screen and (min-width: 1440px) {
+    main {
+     background-image: url(./images/bg-desktop.svg);
+    }
+  }
