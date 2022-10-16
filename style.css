@@ -1,10 +1,6 @@
 @import url(https://fonts.google.com/specimen/Poppins);
 @import url(https://fonts.google.com/specimen/Open+Sans);
 @import url(https://fontawesome.com/);
-@import url();
-@import url();
-
-
 
 :root{
 --Violet: hsl(257, 40%, 49%);
@@ -17,64 +13,71 @@
 }
 
 *{
-    margin: 0;
+  
     padding: 0;
 }
 
 body{
     background-color: var(--Violet);
     height: 100vh;
-    font-weight: var(--font-weight-body);
+    background-image: url(./images/bg-desktop.svg);
+
 }
 
 .main{
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 20px;
+    gap: 1.25rem;
+}
+
+.header{
+    position: relative;
 }
 
 header img {
-    height: 30px;
-    width: 50px;
+    position: relative;
+    width: 6.25rem;
+    margin: 30px;
 }
 
 main img{
     max-width: 100%;
+    margin-left: 1.25rem;
 }
 
+figure{
+    display: inline-flex;
+    gap: 10px;
+    position: absolute;
+    bottom:10px;
+    right: 5.625rem;
 
-.icons{
-    display: flex;
-    justify-content: flex-end;
-    align-content: ;
 }
-
 
 .section2{
-    margin-top: 80px;
-     margin-left: 20px;
+    position: relative;
+     margin-left: 1.25rem;
      
 }
 
 h1{
     color: white;
-    line-height: 40px;
+    line-height: 2.5rem;
     font-weight: var(--font-weight-big-heading);
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 p{
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 1.25rem;
+    margin-bottom: 1.25rem;
     color: #ffffff;
 }
-
 
 button{
     color: var(--Violet);
     border-radius: 25px;
-    padding: 10px 30px;
+    padding: 10px 50px;
     border: none;
 }
 
@@ -84,47 +87,54 @@ button:hover{
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-.facebook{
-    width: 50px;
-    height: 60px;
+.facebook,.twitter,.instagram{
+    width: 1.25rem;
+    height: 1.25rem;
+    border: 1px solid white;
+    border-radius: 9999px;
 }
-
-
-.twitter{
-    width: 50px;
-    height: 60px;
-}
-
-.instagram{
-    width: 50px;
-    height: 60px;
-}
-
-
-
 
 @media screen and (max-width: 375px) {
-    main {
-      background-image: url(./images/bg-mobile.svg);
-      display: grid;
-      grid-template-columns: 1fr;
-      
+
+    body{
+        background-image: url(./images/bg-mobile.svg);
+    }
+
+    main{
+        position: relative;
+        right: -80px;
+    }
+
+    .section1 {
+     grid-row: 1/2;
+         
+    }
+    .section2{
+     
+        grid-row:2/2;
+
+    }
+    
+    h1{
+        line-height: inherit;
+    }
+
+    figure{
+        position: relative;
+        right: 28%;
+        
+       
+    }
+
+    button{
+        margin-bottom: 1.25rem;
+    }
+
+    header img{
+       position: relative;
+       left: 70px;
+    
     }
   }
 
-  @media screen and (min-width: 1440px) {
-    main {
-     background-image: url(./images/bg-desktop.svg);
-    }
-  }
+  
